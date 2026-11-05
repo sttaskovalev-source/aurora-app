@@ -1,48 +1,48 @@
-name: Build Aurora APK
+name: Build Android APK
 
 on:
-  workflow_dispatch:
   push:
     branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - uses: actions/setup-java@v4
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: 17
-
-      - uses: android-actions/setup-android@v3
+          distribution: 'temurin'
+          java-version: '17'
 
       - name: Install dependencies
-        run: |
-          cd aurora
-          npm install --no-audit --no-fund
+        run: npm install
 
-      - name: Add Android platform (if missing)
-        run: |
-          cd aurora
-          if [ ! -d android ]; then npx cap add android; fi
+      # Для Capacitor / Ionic — синхронизация перед сборкой
+      - name: Capacitor Sync (если используется Capacitor)
+        run: npx cap sync android
+        continue-on-error: true
 
-      - name: Sync Capacitor
-        run: |
-          cd aurora
-          npx cap sync android
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
 
-      - name: Build debug APK
-        working-directory: aurora/android
-        run: ./gradlew assembleDebug --no-daemon
+      - name: Build Debug APK
+        run: |
+          cd android
+          ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: aurora-apk
-          path: aurora/android/app/build/outputs/apk/debug/app-debug.apk
+          name: app-debug
+          path: android/app/build/outputs/apk/debug/app-debug.apk
