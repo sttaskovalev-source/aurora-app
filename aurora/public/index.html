@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e0b16" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Aurora" />
+  <title>Aurora — музыка</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">♪</div>
+        <div class="brand-text">
+          <h1>Aurora</h1>
+          <span id="trackCount">0 треков</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="btnSettings" aria-label="Настройки">
+          <svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 12h4M12 12h8M4 17h11M19 17h1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="15" cy="7" r="2" fill="currentColor"/><circle cx="10" cy="12" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>
+        </button>
+        <button class="icon-btn accent" id="btnAdd" aria-label="Добавить трек">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="library" class="library"></main>
+
+    <div id="emptyState" class="empty hidden">
+      <div class="empty-art"><svg viewBox="0 0 24 24"><path d="M9 18V6l12-2v12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg></div>
+      <h2>Здесь пока пусто</h2>
+      <p>Добавьте первый трек — по ссылке с YouTube или названию</p>
+      <button class="primary" id="btnAddEmpty">Добавить трек</button>
+    </div>
+
+    <footer class="mini hidden" id="mini">
+      <button class="mini-info" id="miniInfo">
+        <div class="cover sm" id="miniCover"><svg viewBox="0 0 24 24"><path d="M9 18V6l12-2v12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg></div>
+        <div class="mini-meta">
+          <div class="mini-title" id="miniTitle">—</div>
+          <div class="mini-artist" id="miniArtist">—</div>
+        </div>
+      </button>
+      <button class="icon-btn" id="miniPlay" aria-label="Играть/пауза">
+        <svg viewBox="0 0 24 24" id="miniPlayIcon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn" id="miniNext" aria-label="Следующий">
+        <svg viewBox="0 0 24 24"><path d="M6 6l8 6-8 6V6zM16 6h2v12h-2z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn" id="miniVol" aria-label="Громкость">
+        <svg viewBox="0 0 24 24" id="miniVolIcon"><path d="M3 9v6h4l5 5V4L7 9H3z" fill="currentColor"/><path d="M16 8a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="progress-track"><div class="progress-fill" id="miniProgress"></div></div>
+    </footer>
+  </div>
+
+  <!-- Full now-playing screen -->
+  <div class="nowplaying" id="nowPlaying">
+    <div class="np-top">
+      <button class="icon-btn" id="npCollapse" aria-label="Свернуть">
+        <svg viewBox="0 0 24 24"><path d="M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="np-label">Сейчас играет</div>
+      <button class="icon-btn" id="npMore" aria-label="Удалить трек">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m3 0l-1 13a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1L6 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="np-artwrap">
+      <div class="cover xl" id="npCover"><svg viewBox="0 0 24 24"><path d="M9 18V6l12-2v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg></div>
+    </div>
+
+    <div class="np-meta">
+      <div class="np-title" id="npTitle">—</div>
+      <div class="np-artist" id="npArtist">—</div>
+    </div>
+
+    <div class="np-seek">
+      <input type="range" id="seek" min="0" max="1000" value="0" step="1" />
+      <div class="np-times"><span id="curTime">0:00</span><span id="totalTime">0:00</span></div>
+    </div>
+
+    <div class="np-controls">
+      <button class="icon-btn" id="btnShuffle" aria-label="Перемешать">
+        <svg viewBox="0 0 24 24"><path d="M3 7h3c2 0 3 1 4 2l4 6c1 1 2 2 4 2h3M3 17h3c2 0 3-1 4-2l1-1.5M16 4l3 3-3 3M16 14l3 3-3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="btnPrev" aria-label="Предыдущий">
+        <svg viewBox="0 0 24 24"><path d="M18 6l-8 6 8 6V6zM8 6H6v12h2z" fill="currentColor"/></svg>
+      </button>
+      <button class="play-btn" id="npPlay" aria-label="Играть/пауза">
+        <svg viewBox="0 0 24 24" id="npPlayIcon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn" id="btnNext" aria-label="Следующий">
+        <svg viewBox="0 0 24 24"><path d="M6 6l8 6-8 6V6zM16 6h2v12h-2z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn" id="btnRepeat" aria-label="Повтор">
+        <svg viewBox="0 0 24 24" id="repeatIcon"><path d="M17 3l3 3-3 3M4 6h10a3 3 0 0 1 3 3v1M7 21l-3-3 3-3M20 18H10a3 3 0 0 1-3-3v-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="np-volume">
+      <svg viewBox="0 0 24 24" class="vol-icon"><path d="M3 9v6h4l5 5V4L7 9H3z" fill="currentColor"/><path d="M16 8a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="range" id="volume" min="0" max="1" value="1" step="0.01" />
+    </div>
+  </div>
+
+  <!-- Add / search sheet -->
+  <div class="sheet" id="addSheet">
+    <div class="sheet-scrim" id="sheetScrim"></div>
+    <div class="sheet-body">
+      <div class="sheet-grab"></div>
+      <div class="sheet-head">
+        <h2>Добавить трек</h2>
+        <button class="icon-btn" id="sheetClose" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="searchbox">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Название трека или ссылка YouTube" autocomplete="off" />
+      </div>
+      <div class="sheet-hint">Вставьте ссылку и нажмите Enter, чтобы скачать сразу — или введите название для поиска.</div>
+      <div id="searchResults" class="results"></div>
+      <div id="downloadState" class="download-state hidden"></div>
+    </div>
+  </div>
+
+  <div class="vol-pop hidden" id="volPop">
+    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z" fill="currentColor"/><path d="M16 8a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <input type="range" id="volPopSlider" min="0" max="1" value="1" step="0.01">
+  </div>
+
+  <div class="modal hidden" id="settingsModal">
+    <div class="modal-scrim" id="settingsScrim"></div>
+    <div class="modal-body">
+      <h2>Настройки</h2>
+      <label class="modal-label">Адрес сервера (ПК с музыкой)</label>
+      <input id="serverInput" type="text" placeholder="http://192.168.0.101:8787" autocomplete="off" spellcheck="false">
+      <div class="modal-hint">Оставьте пустым, если открываете приложение с этого же компьютера. Для установленного APK укажите IP-адрес ПК в той же Wi-Fi сети.</div>
+      <label class="modal-label" style="margin-top:16px">Браузер для куки YouTube (для видео с возрастным ограничением)</label>
+      <input id="cookiesInput" type="text" placeholder="chrome / edge / firefox — пусто = выкл" autocomplete="off" spellcheck="false">
+      <div class="modal-hint">Нужно, если YouTube пишет «Sign in to confirm your age». Укажите браузер, в котором вы залогинены в YouTube на этом ПК (например, chrome).</div>
+      <div class="modal-actions">
+        <button class="ghost" id="settingsCancel">Отмена</button>
+        <button class="primary" id="settingsSave">Сохранить</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <audio id="audio" preload="none"></audio>
+  <script src="/offline.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

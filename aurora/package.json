@@ -1,0 +1,20 @@
+{
+  "name": "aurora-music",
+  "version": "1.1.0",
+  "description": "Aurora Music — self-hosted music player + high-quality YouTube downloader (yt-dlp) + offline PWA/APK",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "cap:add": "npx cap add android",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  },
+  "license": "MIT"
+}

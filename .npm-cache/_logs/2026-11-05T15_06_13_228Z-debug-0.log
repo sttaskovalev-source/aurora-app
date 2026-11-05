@@ -1,0 +1,383 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@9.3.1
+2 info using node@v18.14.0
+3 timing npm:load:whichnode Completed in 81ms
+4 timing config:load:defaults Completed in 37ms
+5 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 18ms
+6 timing config:load:builtin Completed in 21ms
+7 timing config:load:cli Completed in 8ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:C:\Users\NoNikzz\OneDrive\Документы\deepseek-harness\default-workspace\.npmrc Completed in 7ms
+10 timing config:load:project Completed in 38ms
+11 timing config:load:file:C:\Users\NoNikzz\.npmrc Completed in 5ms
+12 timing config:load:user Completed in 6ms
+13 timing config:load:file:C:\Users\NoNikzz\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 2ms
+16 timing config:load Completed in 119ms
+17 timing npm:load:configload Completed in 119ms
+18 timing npm:load:mkdirpcache Completed in 6ms
+19 timing npm:load:mkdirplogs Completed in 6ms
+20 verbose title npm i react@18 react-dom@18 music-metadata@10
+21 verbose argv "i" "react@18" "react-dom@18" "music-metadata@10"
+22 timing npm:load:setTitle Completed in 13ms
+23 timing config:load:flatten Completed in 14ms
+24 timing npm:load:display Completed in 17ms
+25 verbose logfile logs-max:10 dir:C:\Users\NoNikzz\OneDrive\Документы\deepseek-harness\default-workspace\.npm-cache\_logs\2026-11-05T15_06_13_228Z-
+26 verbose logfile C:\Users\NoNikzz\OneDrive\Документы\deepseek-harness\default-workspace\.npm-cache\_logs\2026-11-05T15_06_13_228Z-debug-0.log
+27 timing npm:load:logFile Completed in 30ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 275ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing arborist:ctor Completed in 0ms
+34 timing idealTree:init Completed in 20ms
+35 timing idealTree:userRequests Completed in 2ms
+36 silly idealTree buildDeps
+37 silly fetch manifest react@18
+38 http fetch GET 200 https://registry.npmjs.org/npm 917ms (cache miss)
+39 http fetch GET 200 https://registry.npmjs.org/react 1221ms (cache miss)
+40 silly fetch manifest react-dom@18
+41 http fetch GET 200 https://registry.npmjs.org/react-dom 595ms (cache miss)
+42 silly fetch manifest music-metadata@10
+43 http fetch GET 200 https://registry.npmjs.org/music-metadata 213ms (cache miss)
+44 silly placeDep ROOT music-metadata@10.9.1 OK for: default-workspace@1.0.0 want: 10
+45 silly placeDep ROOT react@18.3.1 OK for: default-workspace@1.0.0 want: 18
+46 silly placeDep ROOT react-dom@18.3.1 OK for: default-workspace@1.0.0 want: 18
+47 silly fetch manifest link@^2.1.1
+48 silly fetch manifest debug@^4.4.0
+49 silly fetch manifest strtok3@^10.2.1
+50 silly fetch manifest file-type@^19.6.0
+51 silly fetch manifest media-typer@^1.1.0
+52 silly fetch manifest token-types@^6.0.0
+53 silly fetch manifest content-type@^1.0.5
+54 silly fetch manifest @tokenizer/token@^0.3.0
+55 silly fetch manifest uint8array-extras@^1.4.0
+56 silly fetch manifest loose-envify@^1.1.0
+57 silly fetch manifest scheduler@^0.23.2
+58 http fetch GET 200 https://registry.npmjs.org/link 1175ms (cache miss)
+59 http fetch GET 200 https://registry.npmjs.org/debug 1193ms (cache miss)
+60 http fetch GET 200 https://registry.npmjs.org/uint8array-extras 1232ms (cache miss)
+61 http fetch GET 200 https://registry.npmjs.org/loose-envify 1236ms (cache miss)
+62 http fetch GET 200 https://registry.npmjs.org/@tokenizer%2ftoken 1249ms (cache miss)
+63 http fetch GET 200 https://registry.npmjs.org/media-typer 1290ms (cache miss)
+64 http fetch GET 200 https://registry.npmjs.org/content-type 1279ms (cache miss)
+65 http fetch GET 200 https://registry.npmjs.org/token-types 1304ms (cache miss)
+66 http fetch GET 200 https://registry.npmjs.org/strtok3 1357ms (cache miss)
+67 http fetch GET 200 https://registry.npmjs.org/file-type 1360ms (cache miss)
+68 http fetch GET 200 https://registry.npmjs.org/scheduler 1382ms (cache miss)
+69 timing idealTree:#root Completed in 4031ms
+70 silly placeDep ROOT @tokenizer/token@0.3.0 OK for: music-metadata@10.9.1 want: ^0.3.0
+71 silly placeDep ROOT content-type@1.0.5 OK for: music-metadata@10.9.1 want: ^1.0.5
+72 silly placeDep ROOT debug@4.4.3 OK for: music-metadata@10.9.1 want: ^4.4.0
+73 silly placeDep ROOT file-type@19.6.0 OK for: music-metadata@10.9.1 want: ^19.6.0
+74 silly placeDep ROOT link@2.1.2 OK for: music-metadata@10.9.1 want: ^2.1.1
+75 silly placeDep ROOT media-typer@1.1.1 OK for: music-metadata@10.9.1 want: ^1.1.0
+76 silly placeDep ROOT strtok3@10.7.0 OK for: music-metadata@10.9.1 want: ^10.2.1
+77 silly placeDep ROOT token-types@6.2.0 OK for: music-metadata@10.9.1 want: ^6.0.0
+78 silly placeDep ROOT uint8array-extras@1.6.0 OK for: music-metadata@10.9.1 want: ^1.4.0
+79 silly fetch manifest ms@^2.1.3
+80 silly fetch manifest strtok3@^9.0.1
+81 silly fetch manifest get-stream@^9.0.1
+82 silly fetch manifest ieee754@^1.2.1
+83 silly fetch manifest @borewit/text-codec@^0.2.3
+84 http fetch GET 200 https://registry.npmjs.org/get-stream 311ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/ms 327ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/ieee754 392ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/@borewit%2ftext-codec 539ms (cache miss)
+88 timing idealTree:node_modules/music-metadata Completed in 700ms
+89 timing idealTree:node_modules/@tokenizer/token Completed in 0ms
+90 timing idealTree:node_modules/content-type Completed in 0ms
+91 silly placeDep ROOT ms@2.1.3 OK for: debug@4.4.3 want: ^2.1.3
+92 timing idealTree:node_modules/debug Completed in 22ms
+93 silly placeDep ROOT get-stream@9.0.1 OK for: file-type@19.6.0 want: ^9.0.1
+94 silly placeDep node_modules/file-type strtok3@9.1.1 OK for: file-type@19.6.0 want: ^9.0.1
+95 silly fetch manifest @sec-ant/readable-stream@^0.4.1
+96 silly fetch manifest is-stream@^4.0.1
+97 silly fetch manifest peek-readable@^5.3.1
+98 http fetch GET 200 https://registry.npmjs.org/is-stream 90ms (cache miss)
+99 http fetch GET 200 https://registry.npmjs.org/peek-readable 186ms (cache miss)
+100 http fetch GET 200 https://registry.npmjs.org/@sec-ant%2freadable-stream 499ms (cache miss)
+101 timing idealTree:node_modules/file-type Completed in 528ms
+102 silly placeDep ROOT @sec-ant/readable-stream@0.4.1 OK for: get-stream@9.0.1 want: ^0.4.1
+103 silly placeDep ROOT is-stream@4.0.1 OK for: get-stream@9.0.1 want: ^4.0.1
+104 timing idealTree:node_modules/get-stream Completed in 17ms
+105 timing idealTree:node_modules/@sec-ant/readable-stream Completed in 2ms
+106 timing idealTree:node_modules/is-stream Completed in 0ms
+107 timing idealTree:node_modules/link Completed in 0ms
+108 timing idealTree:node_modules/media-typer Completed in 0ms
+109 timing idealTree:node_modules/ms Completed in 0ms
+110 silly placeDep ROOT loose-envify@1.4.0 OK for: react@18.3.1 want: ^1.1.0
+111 silly fetch manifest js-tokens@^3.0.0 || ^4.0.0
+112 http fetch GET 200 https://registry.npmjs.org/js-tokens 243ms (cache miss)
+113 timing idealTree:node_modules/react Completed in 258ms
+114 silly placeDep ROOT js-tokens@4.0.0 OK for: loose-envify@1.4.0 want: ^3.0.0 || ^4.0.0
+115 timing idealTree:node_modules/loose-envify Completed in 7ms
+116 timing idealTree:node_modules/js-tokens Completed in 1ms
+117 silly placeDep ROOT scheduler@0.23.2 OK for: react-dom@18.3.1 want: ^0.23.2
+118 timing idealTree:node_modules/react-dom Completed in 8ms
+119 timing idealTree:node_modules/scheduler Completed in 0ms
+120 timing idealTree:node_modules/strtok3 Completed in 0ms
+121 silly placeDep ROOT @borewit/text-codec@0.2.3 OK for: token-types@6.2.0 want: ^0.2.3
+122 silly placeDep ROOT ieee754@1.2.1 OK for: token-types@6.2.0 want: ^1.2.1
+123 timing idealTree:node_modules/token-types Completed in 11ms
+124 timing idealTree:node_modules/@borewit/text-codec Completed in 0ms
+125 timing idealTree:node_modules/ieee754 Completed in 0ms
+126 timing idealTree:node_modules/uint8array-extras Completed in 0ms
+127 silly placeDep ROOT peek-readable@5.4.2 OK for: strtok3@9.1.1 want: ^5.3.1
+128 timing idealTree:node_modules/file-type/node_modules/strtok3 Completed in 5ms
+129 timing idealTree:node_modules/peek-readable Completed in 0ms
+130 timing idealTree:buildDeps Completed in 5598ms
+131 timing idealTree:fixDepFlags Completed in 7ms
+132 timing idealTree Completed in 5628ms
+133 timing reify:loadTrees Completed in 5631ms
+134 timing reify:diffTrees Completed in 12ms
+135 silly reify moves {}
+136 timing reify:retireShallow Completed in 5ms
+137 timing reify:createSparse Completed in 176ms
+138 timing reify:loadBundles Completed in 0ms
+139 silly audit bulk request {
+139 silly audit   'music-metadata': [ '10.9.1' ],
+139 silly audit   react: [ '18.3.1' ],
+139 silly audit   'react-dom': [ '18.3.1' ],
+139 silly audit   '@tokenizer/token': [ '0.3.0' ],
+139 silly audit   'content-type': [ '1.0.5' ],
+139 silly audit   debug: [ '4.4.3' ],
+139 silly audit   'file-type': [ '19.6.0' ],
+139 silly audit   link: [ '2.1.2' ],
+139 silly audit   'media-typer': [ '1.1.1' ],
+139 silly audit   strtok3: [ '10.7.0', '9.1.1' ],
+139 silly audit   'token-types': [ '6.2.0' ],
+139 silly audit   'uint8array-extras': [ '1.6.0' ],
+139 silly audit   ms: [ '2.1.3' ],
+139 silly audit   'get-stream': [ '9.0.1' ],
+139 silly audit   '@sec-ant/readable-stream': [ '0.4.1' ],
+139 silly audit   'is-stream': [ '4.0.1' ],
+139 silly audit   'loose-envify': [ '1.4.0' ],
+139 silly audit   'js-tokens': [ '4.0.0' ],
+139 silly audit   scheduler: [ '0.23.2' ],
+139 silly audit   '@borewit/text-codec': [ '0.2.3' ],
+139 silly audit   ieee754: [ '1.2.1' ],
+139 silly audit   'peek-readable': [ '5.4.2' ]
+139 silly audit }
+140 silly tarball no local data for peek-readable@https://registry.npmjs.org/peek-readable/-/peek-readable-5.4.2.tgz. Extracting by manifest.
+141 silly tarball no local data for ieee754@https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz. Extracting by manifest.
+142 silly tarball no local data for @borewit/text-codec@https://registry.npmjs.org/@borewit/text-codec/-/text-codec-0.2.3.tgz. Extracting by manifest.
+143 silly tarball no local data for scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz. Extracting by manifest.
+144 silly tarball no local data for js-tokens@https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz. Extracting by manifest.
+145 silly tarball no local data for is-stream@https://registry.npmjs.org/is-stream/-/is-stream-4.0.1.tgz. Extracting by manifest.
+146 silly tarball no local data for @sec-ant/readable-stream@https://registry.npmjs.org/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz. Extracting by manifest.
+147 silly tarball no local data for loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz. Extracting by manifest.
+148 silly tarball no local data for get-stream@https://registry.npmjs.org/get-stream/-/get-stream-9.0.1.tgz. Extracting by manifest.
+149 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+150 silly tarball no local data for uint8array-extras@https://registry.npmjs.org/uint8array-extras/-/uint8array-extras-1.6.0.tgz. Extracting by manifest.
+151 silly tarball no local data for media-typer@https://registry.npmjs.org/media-typer/-/media-typer-1.1.1.tgz. Extracting by manifest.
+152 silly tarball no local data for strtok3@https://registry.npmjs.org/strtok3/-/strtok3-10.7.0.tgz. Extracting by manifest.
+153 silly tarball no local data for link@https://registry.npmjs.org/link/-/link-2.1.2.tgz. Extracting by manifest.
+154 silly tarball no local data for token-types@https://registry.npmjs.org/token-types/-/token-types-6.2.0.tgz. Extracting by manifest.
+155 silly tarball no local data for file-type@https://registry.npmjs.org/file-type/-/file-type-19.6.0.tgz. Extracting by manifest.
+156 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz. Extracting by manifest.
+157 silly tarball no local data for content-type@https://registry.npmjs.org/content-type/-/content-type-1.0.5.tgz. Extracting by manifest.
+158 silly tarball no local data for @tokenizer/token@https://registry.npmjs.org/@tokenizer/token/-/token-0.3.0.tgz. Extracting by manifest.
+159 silly tarball no local data for strtok3@https://registry.npmjs.org/strtok3/-/strtok3-9.1.1.tgz. Extracting by manifest.
+160 silly tarball no local data for music-metadata@https://registry.npmjs.org/music-metadata/-/music-metadata-10.9.1.tgz. Extracting by manifest.
+161 silly tarball no local data for react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz. Extracting by manifest.
+162 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-18.3.1.tgz. Extracting by manifest.
+163 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 537ms
+164 timing auditReport:getReport Completed in 559ms
+165 silly audit report {
+165 silly audit report   'music-metadata': [
+165 silly audit report     {
+165 silly audit report       id: 1114969,
+165 silly audit report       url: 'https://github.com/advisories/GHSA-v6c2-xwv6-8xf7',
+165 silly audit report       title: 'music-metadata has an infinite loop vulnerability in ASF parser',
+165 silly audit report       severity: 'high',
+165 silly audit report       vulnerable_versions: '<=11.12.1',
+165 silly audit report       cwe: [Array],
+165 silly audit report       cvss: [Object]
+165 silly audit report     },
+165 silly audit report     {
+165 silly audit report       id: 1241691,
+165 silly audit report       url: 'https://github.com/advisories/GHSA-f94x-6692-553q',
+165 silly audit report       title: 'music-metadata: MP4 stsd sample-entry size==0 causes a synchronous infinite loop (DoS) — unreleased regression on master',
+165 silly audit report       severity: 'moderate',
+165 silly audit report       vulnerable_versions: '<11.16.0',
+165 silly audit report       cwe: [Array],
+165 silly audit report       cvss: [Object]
+165 silly audit report     },
+165 silly audit report     {
+165 silly audit report       id: 1241692,
+165 silly audit report       url: 'https://github.com/advisories/GHSA-53v6-4h7p-p4gj',
+165 silly audit report       title: 'music-metadata: Uncontrolled memory allocation in APEv2 parser',
+165 silly audit report       severity: 'moderate',
+165 silly audit report       vulnerable_versions: '<=11.12.3',
+165 silly audit report       cwe: [Array],
+165 silly audit report       cvss: [Object]
+165 silly audit report     },
+165 silly audit report     {
+165 silly audit report       id: 1241693,
+165 silly audit report       url: 'https://github.com/advisories/GHSA-jjpr-9cvf-cq55',
+165 silly audit report       title: 'music-metadata: ID3v2 tag size not validated before allocation, causing memory exhaustion DoS',
+165 silly audit report       severity: 'moderate',
+165 silly audit report       vulnerable_versions: '<=11.12.3',
+165 silly audit report       cwe: [Array],
+165 silly audit report       cvss: [Object]
+165 silly audit report     },
+165 silly audit report     {
+165 silly audit report       id: 1241694,
+165 silly audit report       url: 'https://github.com/advisories/GHSA-5gfj-9q3v-qfp3',
+165 silly audit report       title: 'music-metadata: EBML parser trusts element lengths, allowing memory exhaustion or process abort',
+165 silly audit report       severity: 'moderate',
+165 silly audit report       vulnerable_versions: '<11.16.0',
+165 silly audit report       cwe: [Array],
+165 silly audit report       cvss: [Object]
+165 silly audit report     },
+165 silly audit report     {
+165 silly audit report       id: 1241708,
+165 silly audit report       url: 'https://github.com/advisories/GHSA-8j4c-6x6g-rq3j',
+165 silly audit report       title: 'music-metadata: uncatchable process crash parsing a crafted `.dsf` (residual of GHSA-v6c2-xwv6-8xf7)',
+165 silly audit report       severity: 'moderate',
+165 silly audit report       vulnerable_versions: '<=11.14.0',
+165 silly audit report       cwe: [Array],
+165 silly audit report       cvss: [Object]
+165 silly audit report     }
+165 silly audit report   ],
+165 silly audit report   'file-type': [
+165 silly audit report     {
+165 silly audit report       id: 1114301,
+165 silly audit report       url: 'https://github.com/advisories/GHSA-5v7r-6r5c-r473',
+165 silly audit report       title: 'file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header',
+165 silly audit report       severity: 'moderate',
+165 silly audit report       vulnerable_versions: '>=13.0.0 <21.3.1',
+165 silly audit report       cwe: [Array],
+165 silly audit report       cvss: [Object]
+165 silly audit report     }
+165 silly audit report   ]
+165 silly audit report }
+166 timing metavuln:packument:music-metadata Completed in 5ms
+167 timing metavuln:packument:file-type Completed in 0ms
+168 timing metavuln:cache:get:security-advisory:music-metadata:unOcKQFJp7USbyg9LrgPQ6kUwZqoUqWhlPvfP+Y7T/CgkvLWZs3dh9PTCe1i43pcd7IMZj6NjJ2xBPzUawkcQg== Completed in 75ms
+169 timing metavuln:load:security-advisory:music-metadata:1114969 Completed in 43ms
+170 timing metavuln:cache:get:security-advisory:music-metadata:rbpXnbhyCMo1YFxAwFpRqHxQ7OqJ5h5KPNg6A0p2tvXT1Xk6jXY4DMxKgdUo7vCh/Ts7adVc06WXmy8oviUktg== Completed in 126ms
+171 timing metavuln:load:security-advisory:music-metadata:1241691 Completed in 27ms
+172 timing metavuln:cache:get:security-advisory:music-metadata:e7p9dcRRs6xGYk20/cb+qVCGhg4WaZa/ELEW6PJGUudAe83GFgNJcnCEPNKMN0+MU8ZkHMpDXxg5VAWBkix9qw== Completed in 154ms
+173 timing metavuln:load:security-advisory:music-metadata:1241692 Completed in 66ms
+174 timing metavuln:cache:get:security-advisory:music-metadata:QW2DF4+oBU6aTs2iynSlxwuwbf6I7e7WAIdRNZgm69+h3Oxboky3/R16i3p/cdKECLAVLGnu6NMk8kJwMvNi5A== Completed in 235ms
+175 timing metavuln:load:security-advisory:music-metadata:1241693 Completed in 52ms
+176 timing metavuln:cache:get:security-advisory:music-metadata:l8NsChefN25WBdJhXLNrm1SyMQo7AfVdkmJlwrhYHG08qZSyVe2K/R3qAyLl1le7GvPAladR31HQwqTVAYKLgw== Completed in 288ms
+177 timing metavuln:load:security-advisory:music-metadata:1241694 Completed in 28ms
+178 timing metavuln:cache:get:security-advisory:music-metadata:OtM7v0YyBgbGo914J65qsA3hl0MZ1ca3NW2WtGNAAsW5JpmmksD4jUC6OMuzGY+hjUK21HT2xkWVfmp9lEBcsw== Completed in 317ms
+179 timing metavuln:load:security-advisory:music-metadata:1241708 Completed in 27ms
+180 timing metavuln:cache:get:security-advisory:file-type:AZrJ3br1RJSxE2G6Czr5++tFYi2k2/ylfZRgUQZUrlygD3CZ/ZALBU9rjpJR/B3eszCvA7o1H5g6DJc+NnIKow== Completed in 345ms
+181 timing metavuln:load:security-advisory:file-type:1114301 Completed in 15ms
+182 http fetch GET 200 https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz 1253ms (cache miss)
+183 http fetch GET 200 https://registry.npmjs.org/peek-readable/-/peek-readable-5.4.2.tgz 1359ms (cache miss)
+184 http fetch GET 200 https://registry.npmjs.org/get-stream/-/get-stream-9.0.1.tgz 1340ms (cache miss)
+185 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 1352ms (cache miss)
+186 timing reifyNode:node_modules/ieee754 Completed in 1464ms
+187 timing reifyNode:node_modules/ms Completed in 1453ms
+188 http fetch GET 200 https://registry.npmjs.org/content-type/-/content-type-1.0.5.tgz 1358ms (cache miss)
+189 http fetch GET 200 https://registry.npmjs.org/strtok3/-/strtok3-9.1.1.tgz 1355ms (cache miss)
+190 timing metavuln:cache:put:security-advisory:music-metadata:rbpXnbhyCMo1YFxAwFpRqHxQ7OqJ5h5KPNg6A0p2tvXT1Xk6jXY4DMxKgdUo7vCh/Ts7adVc06WXmy8oviUktg== Completed in 785ms
+191 timing metavuln:calculate:security-advisory:music-metadata:1241691 Completed in 939ms
+192 timing metavuln:cache:put:security-advisory:music-metadata:e7p9dcRRs6xGYk20/cb+qVCGhg4WaZa/ELEW6PJGUudAe83GFgNJcnCEPNKMN0+MU8ZkHMpDXxg5VAWBkix9qw== Completed in 722ms
+193 timing metavuln:calculate:security-advisory:music-metadata:1241692 Completed in 944ms
+194 timing metavuln:cache:put:security-advisory:file-type:AZrJ3br1RJSxE2G6Czr5++tFYi2k2/ylfZRgUQZUrlygD3CZ/ZALBU9rjpJR/B3eszCvA7o1H5g6DJc+NnIKow== Completed in 582ms
+195 timing metavuln:calculate:security-advisory:file-type:1114301 Completed in 944ms
+196 http fetch GET 200 https://registry.npmjs.org/@tokenizer/token/-/token-0.3.0.tgz 1371ms (cache miss)
+197 timing reifyNode:node_modules/@tokenizer/token Completed in 1476ms
+198 http fetch GET 200 https://registry.npmjs.org/is-stream/-/is-stream-4.0.1.tgz 1406ms (cache miss)
+199 timing metavuln:cache:put:security-advisory:music-metadata:unOcKQFJp7USbyg9LrgPQ6kUwZqoUqWhlPvfP+Y7T/CgkvLWZs3dh9PTCe1i43pcd7IMZj6NjJ2xBPzUawkcQg== Completed in 848ms
+200 timing metavuln:calculate:security-advisory:music-metadata:1114969 Completed in 966ms
+201 timing metavuln:cache:put:security-advisory:music-metadata:QW2DF4+oBU6aTs2iynSlxwuwbf6I7e7WAIdRNZgm69+h3Oxboky3/R16i3p/cdKECLAVLGnu6NMk8kJwMvNi5A== Completed in 675ms
+202 timing metavuln:calculate:security-advisory:music-metadata:1241693 Completed in 964ms
+203 timing metavuln:cache:put:security-advisory:music-metadata:OtM7v0YyBgbGo914J65qsA3hl0MZ1ca3NW2WtGNAAsW5JpmmksD4jUC6OMuzGY+hjUK21HT2xkWVfmp9lEBcsw== Completed in 626ms
+204 timing metavuln:calculate:security-advisory:music-metadata:1241708 Completed in 970ms
+205 timing metavuln:cache:put:security-advisory:music-metadata:l8NsChefN25WBdJhXLNrm1SyMQo7AfVdkmJlwrhYHG08qZSyVe2K/R3qAyLl1le7GvPAladR31HQwqTVAYKLgw== Completed in 655ms
+206 timing metavuln:calculate:security-advisory:music-metadata:1241694 Completed in 971ms
+207 http fetch GET 200 https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz 1454ms (cache miss)
+208 timing metavuln:cache:get:security-advisory:music-metadata:AM8MwUKS/iec23uWmsb54RSEnd2jMnJwyEv7SGsk6CyOsvH5Cm+MwTBhDF/FMIu9llmeFmIhXp/DiQp8ygMbFw== Completed in 16ms
+209 timing metavuln:load:security-advisory:music-metadata:AZrJ3br1RJSxE2G6Czr5++tFYi2k2/ylfZRgUQZUrlygD3CZ/ZALBU9rjpJR/B3eszCvA7o1H5g6DJc+NnIKow== Completed in 191ms
+210 timing reifyNode:node_modules/is-stream Completed in 1741ms
+211 http fetch GET 200 https://registry.npmjs.org/token-types/-/token-types-6.2.0.tgz 1634ms (cache miss)
+212 timing reifyNode:node_modules/content-type Completed in 1945ms
+213 timing reifyNode:node_modules/js-tokens Completed in 2156ms
+214 http fetch GET 200 https://registry.npmjs.org/@borewit/text-codec/-/text-codec-0.2.3.tgz 2136ms (cache miss)
+215 timing reifyNode:node_modules/token-types Completed in 2209ms
+216 http fetch GET 200 https://registry.npmjs.org/media-typer/-/media-typer-1.1.1.tgz 2215ms (cache miss)
+217 timing reifyNode:node_modules/@borewit/text-codec Completed in 2387ms
+218 http fetch GET 200 https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 2338ms (cache miss)
+219 timing reifyNode:node_modules/media-typer Completed in 2436ms
+220 timing reifyNode:node_modules/loose-envify Completed in 2548ms
+221 http fetch GET 200 https://registry.npmjs.org/uint8array-extras/-/uint8array-extras-1.6.0.tgz 2549ms (cache miss)
+222 timing reifyNode:node_modules/uint8array-extras Completed in 2632ms
+223 timing metavuln:cache:put:security-advisory:music-metadata:AM8MwUKS/iec23uWmsb54RSEnd2jMnJwyEv7SGsk6CyOsvH5Cm+MwTBhDF/FMIu9llmeFmIhXp/DiQp8ygMbFw== Completed in 930ms
+224 timing metavuln:calculate:security-advisory:music-metadata:AZrJ3br1RJSxE2G6Czr5++tFYi2k2/ylfZRgUQZUrlygD3CZ/ZALBU9rjpJR/B3eszCvA7o1H5g6DJc+NnIKow== Completed in 1137ms
+225 timing auditReport:init Completed in 2127ms
+226 timing reify:audit Completed in 2695ms
+227 http fetch GET 200 https://registry.npmjs.org/file-type/-/file-type-19.6.0.tgz 2906ms (cache miss)
+228 http fetch GET 200 https://registry.npmjs.org/link/-/link-2.1.2.tgz 2911ms (cache miss)
+229 timing reifyNode:node_modules/link Completed in 3004ms
+230 timing reifyNode:node_modules/file-type Completed in 3076ms
+231 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 2990ms (cache miss)
+232 timing reifyNode:node_modules/debug Completed in 3094ms
+233 timing reifyNode:node_modules/get-stream Completed in 3164ms
+234 timing reifyNode:node_modules/peek-readable Completed in 3245ms
+235 http fetch GET 200 https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz 3288ms (cache miss)
+236 timing reifyNode:node_modules/scheduler Completed in 3418ms
+237 timing reifyNode:node_modules/file-type/node_modules/strtok3 Completed in 3416ms
+238 http fetch GET 200 https://registry.npmjs.org/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz 3577ms (cache miss)
+239 timing reifyNode:node_modules/@sec-ant/readable-stream Completed in 3688ms
+240 http fetch GET 200 https://registry.npmjs.org/react/-/react-18.3.1.tgz 3590ms (cache miss)
+241 timing reifyNode:node_modules/react Completed in 3726ms
+242 http fetch GET 200 https://registry.npmjs.org/strtok3/-/strtok3-10.7.0.tgz 4298ms (cache miss)
+243 timing reifyNode:node_modules/strtok3 Completed in 4396ms
+244 http fetch GET 200 https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz 4604ms (cache miss)
+245 timing reifyNode:node_modules/react-dom Completed in 4727ms
+246 http fetch GET 200 https://registry.npmjs.org/music-metadata/-/music-metadata-10.9.1.tgz 4988ms (cache miss)
+247 timing reifyNode:node_modules/music-metadata Completed in 5106ms
+248 timing reify:unpack Completed in 5121ms
+249 timing reify:unretire Completed in 2ms
+250 timing build:queue Completed in 3ms
+251 timing build:link:node_modules/link Completed in 11ms
+252 timing build:link:node_modules/loose-envify Completed in 10ms
+253 timing build:link Completed in 11ms
+254 timing build:deps Completed in 16ms
+255 timing build Completed in 16ms
+256 timing reify:build Completed in 18ms
+257 timing reify:trash Completed in 0ms
+258 timing reify:save Completed in 17ms
+259 timing reify Completed in 11123ms
+260 silly ADD node_modules/peek-readable
+261 silly ADD node_modules/ieee754
+262 silly ADD node_modules/@borewit/text-codec
+263 silly ADD node_modules/scheduler
+264 silly ADD node_modules/js-tokens
+265 silly ADD node_modules/loose-envify
+266 silly ADD node_modules/is-stream
+267 silly ADD node_modules/@sec-ant/readable-stream
+268 silly ADD node_modules/get-stream
+269 silly ADD node_modules/ms
+270 silly ADD node_modules/uint8array-extras
+271 silly ADD node_modules/token-types
+272 silly ADD node_modules/strtok3
+273 silly ADD node_modules/media-typer
+274 silly ADD node_modules/link
+275 silly ADD node_modules/file-type
+276 silly ADD node_modules/file-type/node_modules/strtok3
+277 silly ADD node_modules/debug
+278 silly ADD node_modules/content-type
+279 silly ADD node_modules/@tokenizer/token
+280 silly ADD node_modules/react-dom
+281 silly ADD node_modules/react
+282 silly ADD node_modules/music-metadata
+283 timing command:i Completed in 11140ms
+284 notice
+284 notice New major version of npm available! 9.3.1 -> 12.2.2
+284 notice Changelog: <https://github.com/npm/cli/releases/tag/v12.2.2>
+284 notice Run `npm install -g npm@12.2.2` to update!
+284 notice
+285 verbose exit 0
+286 timing npm Completed in 11656ms
+287 info ok

@@ -1,0 +1,2 @@
+
+68584e1d0f3502bfcde68fd910157b011e2308c4	{"key":"make-fetch-happen:request-cache:https://registry.npmjs.org/-/ping?write=true","integrity":"sha512-J8dGcK23UHX60FjVzq97IMTneGyDuuijL2Jvl4KvNMmjPCBG72D9Knh403jin+yFGAa72aZ4ePOp8c2kgwdj/Q==","time":1793891066751,"size":2,"metadata":{"time":1793891066339,"url":"https://registry.npmjs.org/-/ping?write=true","reqHeaders":{},"resHeaders":{"content-type":"application/json","date":"Thu, 05 Nov 2026 15:04:26 GMT"},"options":{"compress":true}}}
