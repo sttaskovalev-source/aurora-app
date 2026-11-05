@@ -1,4 +1,4 @@
-nname: Build Aurora APK
+name: Build Aurora APK
 
 on:
   workflow_dispatch:
@@ -23,20 +23,26 @@ jobs:
       - uses: android-actions/setup-android@v3
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: |
+          cd aurora
+          npm install --no-audit --no-fund
 
       - name: Add Android platform (if missing)
-        run: if [ ! -d android ]; then npx cap add android; fi
+        run: |
+          cd aurora
+          if [ ! -d android ]; then npx cap add android; fi
 
       - name: Sync Capacitor
-        run: npx cap sync android
+        run: |
+          cd aurora
+          npx cap sync android
 
       - name: Build debug APK
-        working-directory: android
+        working-directory: aurora/android
         run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: aurora-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: aurora/android/app/build/outputs/apk/debug/app-debug.apk
